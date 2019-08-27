@@ -1,0 +1,38 @@
+﻿<Window x:Class="test.register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        Icon="D:\www.ico"
+        Title="Education|Register" Height="800"  Width="1200"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF45CBE0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Система оцінювання знань студентів у ВНЗ" Style="{StaticResource lab}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="48" Height="122" Width="1068" Margin="67,-35,59,585"/>
+        <Label FontSize="24" FontFamily="TimesNewRoman" Height="50" Width="100" Foreground="White" Margin="401,137,693,585" FontWeight="Bold">Логін:</Label>
+        <TextBox Name="login" Height="50" Width="400" FontSize="24" Margin="401,169,393,553" Background="White"></TextBox>
+
+        <Label FontSize="24" FontFamily="TimesNewRoman" Height="50" Width="120" Foreground="White" Margin="401,224,673,498" FontWeight="Bold">Пароль:</Label>
+        <PasswordBox Name="password" Height="50" Width="400" FontSize="24" Margin="401,255,393,467" Background="White"></PasswordBox>
+
+        <Label FontSize="24" FontFamily="TimesNewRoman" Height="50" Width="250" Foreground="White" Margin="401,310,543,412" FontWeight="Bold">Повторіть пароль:</Label>
+        <PasswordBox Name="repass"  Height="50" Width="400" FontSize="24" Margin="401,340,393,382" Background="White"></PasswordBox>
+
+        <Label FontSize="24" FontFamily="TimesNewRoman" Height="50" Width="250" Foreground="White" Margin="401,395,543,327" FontWeight="Bold">Пошта:</Label>
+        <TextBox Name="email" Height="50" Width="400" FontSize="24" Margin="401,426,393,296" Background="White"></TextBox>
+
+        <Label FontSize="24" FontFamily="TimesNewRoman" Height="50" Width="250" Foreground="White" Margin="401,481,543,241" FontWeight="Bold">Телефон:</Label>
+        <Label FontSize="28" FontFamily="TimesNewRoman" Height="50" Width="80" Foreground="White" Margin="401,514,713,208" FontWeight="Bold">+38</Label>
+        <TextBox PreviewTextInput="tel_PreviewTextInput" Name="tel" Height="50" Width="320" FontSize="24" Margin="481,514,393,208" Background="White"></TextBox>
+        
+        <Button  Content="Реєстрація" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource buttonStyle}"  Width="150" Height="50" Margin="651,610,393,112" FontSize="22" Background="#FFD44133" Click="ent"/>
+        <Label Content="v.1.0" Foreground="White" Style="{StaticResource lab}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Height="50" Width="100" Margin="1084,712,10,10" />
+        <TextBox Visibility="Hidden" Foreground="Red" Name="error" Width="300" Height="80" Margin="850,484,44,208"></TextBox>
+    </Grid>
+</Window>
